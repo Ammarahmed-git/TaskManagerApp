@@ -1,74 +1,247 @@
-<h1>Project Description:</h1>
-<p>Create a simple Task Management System where users can add, view, edit, and delete tasks. The application should have user authentication and authorization to ensure that only authorized users can manage tasks.</p>
+<div align="center">
 
-<h1>Features:</h1>
-<ol>
-  <li><h5>User Registration and Authentication:</h5>
-    <ul>
-      <li>Users should be able to register with a username and password.</li>
-      <li>Implement user login/logout functionality.</li>
-    </ul>
-  </li>
-  <li><h5>Task Management:</h5>
-    <ul>
-      <li>Authenticated users can create tasks with a title, description, due date, and status.</li>
-      <li>Tasks should be displayed in a list, and users should be able to view, edit, and delete tasks.</li>
-    </ul>
-  </li>
-  <li><h5>Task Status:</h5>
-    <ul>
-      <li>Each task can have a status (e.g., To Do, In Progress, Done).</li>
-      <li>Implement the ability to change the status of a task.</li>
-    </ul>
-  </li>
-  <li><h5>User Roles:</h5>
-    <ul>
-      <li>Have different user roles such as regular user and administrator.</li>
-      <li>Only administrators should be able to delete tasks.</li>
-    </ul>
-  </li>
-</ol>
-    
-<h1>Basic Project Document Outline:</h1>
-<ol>
-  <li><h5>Introduction:</h5>
-    <ul>
-      <li>Brief description of the project and its purpose.</li>
-      <li>Mention the technologies used (ASP.NET MVC, C#, etc.).</li>
-    </ul>
-  </li>
-  <li><h5>Project Scope:</h5>
-    <ul><li>Clearly define what features will be included in the project.</li></ul>
-  </li>
-  <li><h5>User Stories:</h5>
-    <ul><li>Define user stories for different user roles (e.g., guest, registered user, administrator).</li></ul>
-  </li>
-  <li><h5>Database Schema:</h5>
-    <ul><li>Design the database schema for storing user information and tasks.</li></ul>
-  </li>
-  <li><h5>Authentication and Authorization:</h5>
-    <ul><li>Describe how user registration, login, and role-based authorization will be implemented.</li></ul>
-  </li>
-  <li><h5>Task Management:</h5>
-    <ul><li>Explain the structure of tasks, including fields like title, description, due date, and status.</li></ul>
-  </li>
-  <li><h5>User Interface Design:</h5>
-    <ul><li>Sketch or describe how the user interface will look, including the pages for task creation, task listing, and user management.</li></ul>
-  </li>
-  <li><h5>Implementation Plan:</h5>
-    <ul><li>Break down the implementation into smaller tasks and create a timeline.</li></ul>
-  </li>
-  <li><h5>Challenges and Solutions:</h5>
-    <ul><li>Anticipate potential challenges and provide solutions.</li></ul>
-  </li>
-  <li><h5>Testing:</h5>
-    <ul><li>Outline the testing strategy, including unit testing and user acceptance testing.</li></ul>
-  </li>
-  <li><h5>Conclusion:</h5>
-    <ul><li>Summarize the key points of the document.</li></ul>
-  </li>
-</ol>
-<p>Remember that this is just a basic outline, and you can analyze and add more details based on the complexity and requirements of your mini-project. Good luck with your ASP.NET MVC mini-project!</p>
+# ✅ TaskManager
 
-<h1>This is my practice project i hope you like it :)</h1>
-"# TaskManagerApp" 
+### *Stop forgetting. Start delivering.*
+
+[![C#](https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/csharp/)
+[![ASP.NET MVC](https://img.shields.io/badge/Framework-ASP.NET%20MVC-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/en-us/apps/aspnet/mvc)
+[![Visual Studio](https://img.shields.io/badge/IDE-Visual%20Studio-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white)](https://visualstudio.microsoft.com/)
+[![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/en-us/sql-server)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+
+<br/>
+
+> 🛠️ A full-stack ASP.NET MVC web app with user auth, role-based access control, and complete task lifecycle management.
+
+<br/>
+
+---
+
+</div>
+
+## 📖 Table of Contents
+
+- [About](#-about)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Database Schema](#-database-schema)
+- [User Roles](#-user-roles)
+- [Getting Started](#-getting-started)
+- [Project Structure](#-project-structure)
+- [User Stories](#-user-stories)
+- [Screenshots](#-screenshots)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🧩 About
+
+**TaskManager** is a web-based Task Management System built with **ASP.NET MVC** and **C#**. It provides a clean, role-aware interface for teams or individuals to create, track, and manage tasks through their full lifecycle — from *To Do* all the way to *Done*.
+
+Authentication and role-based authorization ensure that your data stays organized and access-controlled, whether you're a regular team member or an admin keeping things in order.
+
+---
+
+## ✨ Features
+
+### 🔐 User Authentication & Registration
+- Secure **user registration** with username & password
+- Full **login / logout** session management
+- Password-protected routes — no sneaking in without credentials
+
+### 📋 Task Management (CRUD)
+- Create tasks with a **title**, **description**, **due date**, and **status**
+- View all tasks in a clean, sortable **list view**
+- **Edit** task details at any time
+- **Delete** tasks (admin-only for safety)
+
+### 🔄 Task Status Workflow
+Track every task through its lifecycle:
+
+```
+[ To Do ] ──► [ In Progress ] ──► [ Done ]
+```
+
+- Status can be updated at any time by the task owner
+- Visual indicators make it easy to see what needs attention
+
+### 👥 Role-Based Access Control
+| Action | Regular User | Administrator |
+|---|:---:|:---:|
+| Register / Login | ✅ | ✅ |
+| Create Tasks | ✅ | ✅ |
+| Edit Own Tasks | ✅ | ✅ |
+| View All Tasks | ✅ | ✅ |
+| Delete Tasks | ❌ | ✅ |
+| Manage Users | ❌ | ✅ |
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Language** | C# |
+| **Framework** | ASP.NET MVC |
+| **IDE** | Visual Studio |
+| **Database** | Microsoft SQL Server |
+| **ORM** | Entity Framework |
+| **Auth** | ASP.NET Identity |
+| **Frontend** | Razor Views, HTML5, CSS3, Bootstrap |
+| **Config** | Web.config (Debug / Release profiles) |
+
+---
+
+## 🗄 Database Schema
+
+```
+┌──────────────┐          ┌──────────────────────┐
+│    Users     │          │        Tasks         │
+├──────────────┤          ├──────────────────────┤
+│ Id (PK)      │──────────│ Id (PK)              │
+│ Username     │  1 : N   │ Title                │
+│ PasswordHash │          │ Description          │
+│ Role         │          │ DueDate              │
+└──────────────┘          │ Status               │
+                          │ UserId (FK)          │
+                          └──────────────────────┘
+```
+
+**Task Status Enum:** `ToDo` | `InProgress` | `Done`  
+**User Roles:** `User` | `Administrator`
+
+---
+
+## 👥 User Roles
+
+### 👤 Regular User
+A registered user can manage their own tasks — create, view, and update status — but cannot delete tasks or access admin panels.
+
+### 🛡️ Administrator
+An admin has full control: they can delete any task, manage user accounts, and oversee the entire task board across all users.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Visual Studio 2019+** (with ASP.NET workload)
+- **.NET Framework 4.x** or **.NET 6+** (check `.csproj` for target)
+- **SQL Server** (LocalDB works fine for development)
+- **NuGet** package manager
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Ammarahmed-git/TaskManagerApp.git
+
+# 2. Open the solution in Visual Studio
+#    File → Open → Project/Solution → TaskManagementSystem.sln
+```
+
+```bash
+# 3. Restore NuGet packages
+#    Right-click Solution → Restore NuGet Packages
+#    Or via Package Manager Console:
+Update-Package -reinstall
+```
+
+```bash
+# 4. Set up the database
+#    In Package Manager Console:
+Enable-Migrations
+Update-Database
+```
+
+```bash
+# 5. Run the application
+#    Press F5 or click the green ▶ Run button in Visual Studio
+#    App will open at https://localhost:{port}
+```
+
+> 💡 **Tip:** Update the connection string in `Web.config` to point to your local SQL Server instance if the default LocalDB doesn't work.
+
+---
+
+## 📁 Project Structure
+
+```
+TaskManagerApp/
+├── Controllers/              # MVC Controllers (Tasks, Account, Admin)
+├── Models/                   # Entity models & ViewModels
+├── Views/                    # Razor .cshtml templates
+│   ├── Tasks/                # Task list, create, edit, detail views
+│   ├── Account/              # Login & Register views
+│   └── Shared/               # Layout, nav, error pages
+├── App_Data/                 # Local DB files (if using LocalDB)
+├── Global.asax               # App entry point & route config
+├── Global.asax.cs            # Application event handlers
+├── Web.config                # App configuration & connection strings
+├── Web.Debug.config          # Debug-specific config transforms
+├── Web.Release.config        # Release-specific config transforms
+├── packages.config           # NuGet dependencies
+└── TaskManagementSystem.sln  # Visual Studio solution file
+```
+
+---
+
+## 📝 User Stories
+
+| Role | Story |
+|---|---|
+| Guest | I can register a new account to get started |
+| Guest | I can log in with my credentials to access my tasks |
+| User | I can create a task with a title, description, and due date |
+| User | I can view all my tasks in a single dashboard |
+| User | I can update the status of my task as I make progress |
+| User | I can edit a task's details if requirements change |
+| Admin | I can delete any task from the system |
+| Admin | I can manage all users and their roles |
+
+---
+
+## 📱 Screenshots
+
+> _Coming soon — screenshots will be added here._
+
+<!-- Uncomment and replace paths once you have screenshots:
+| Login | Task List | Create Task | Admin Panel |
+|-------|-----------|-------------|-------------|
+| ![Login](screenshots/login.png) | ![Tasks](screenshots/tasklist.png) | ![Create](screenshots/create.png) | ![Admin](screenshots/admin.png) |
+-->
+
+---
+
+## 🤝 Contributing
+
+All contributions are welcome! Here's how to get involved:
+
+1. **Fork** the repository
+2. **Create** your feature branch — `git checkout -b feature/your-feature`
+3. **Commit** your changes — `git commit -m 'Add your feature'`
+4. **Push** to the branch — `git push origin feature/your-feature`
+5. **Open** a Pull Request
+
+Please test thoroughly before submitting and keep code style consistent with the rest of the project.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+Made with ❤️ by [Ammar Ahmed](https://github.com/Ammarahmed-git)
+
+🎯 *A practice project — built to learn, shared to inspire.*
+
+⭐ Found it helpful? Drop a star!
+
+</div>
